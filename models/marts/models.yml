@@ -1,0 +1,17 @@
+
+version: 2
+
+models:
+  - name: user_mql_events
+    columns:
+      - name: email
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: user_mql_score
+    columns:
+      - name: email
+      - name: mql_score
+        description: 'Users MQL score'
