@@ -15,6 +15,8 @@ We'll use dbt for data modeling and Hightouch to send our MQLs from Materialize 
 
 That was a mouth-full. Let's demonstrate how simple this actually is. 
 
+<img width="725" alt="image" src="https://user-images.githubusercontent.com/8192401/173401715-c21c4f30-0bcd-44d9-9b4a-78ee01c82194.png">
+
 1. Set up your website to ['track'](https://segment.com/docs/connections/spec/track/) actions that a user might take if they were curious about your product. 
 In our case, we think that if a user signs up for a demo, downloads a whitepaper, joins our community, subscribes to our newsletter, or attends a meetup, they might want to learn more about what we are up to.
 2. Set up a kafka cluster on [upstash.com](https://docs.upstash.com/kafka). Create a topic for your website events to be sent to. 
