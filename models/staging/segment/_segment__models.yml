@@ -3,3 +3,5 @@ version: 2
 models:
   - name: web_production_stg
     description: "stage web_production"
+  - name: cloud_production_stg
+    description: "stage web_production"

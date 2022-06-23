@@ -1,9 +1,9 @@
-name: 'mz-segment'
+name: 'mz_segment'
 version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'mz-segment'
+profile: 'mz_segment'
 
 model-paths: ["sources","models"]
 analysis-paths: ["analyses"]
@@ -19,13 +19,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 # Configuring models
 models:
-  mz-segment:
+  mz_segment:
     staging:
       +materialized: view
+      +schema: "dbt_{{ env_var('MZ_USER')}}"
     marts:
       +materailized: materializedview
+      +schema: "dbt_{{ env_var('MZ_USER')}}"
 
 tests:
-  mz-segment:
+  mz_segment:
     +store_failures: true
     +schema: test

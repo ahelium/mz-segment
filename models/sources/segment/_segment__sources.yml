@@ -5,3 +5,4 @@ sources:
     schema: public
     tables:
       - name: web_production
+      - name: cloud_production

@@ -1,4 +1,4 @@
-mz-segment:
+mz_segment:
   outputs:
     dev:
       type: materialize
@@ -9,5 +9,14 @@ mz-segment:
       pass: password
       database: materialize
       schema: public
-
-  target: dev
+    cloud_dev:
+      type: materialize
+      threads: 1
+      host: "{{ env_var('MZ_HOST') }}"
+      port: 6875
+      user: "{{ env_var('MZ_USER') }}@materialize.com"
+      pass: "{{ env_var('MZ_PW') }}"
+      database: materialize
+      schema: public
+      sslmode: require
+  target: cloud

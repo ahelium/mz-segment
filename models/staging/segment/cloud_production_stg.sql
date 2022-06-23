@@ -1,6 +1,6 @@
 WITH source AS (
 
-    SELECT * FROM {{ source('segment','web_production') }}
+    SELECT * FROM {{ source('segment','cloud_production') }}
 
 ),
 
